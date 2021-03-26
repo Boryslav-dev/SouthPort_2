@@ -43,6 +43,5 @@ class orderController extends Controller
 
         Mail::to('kuchkov70@gmail.com')->send(new newMail($data));
         return back()->with('success', 'Ваш заказ успешно принят!');
-
     }
 }

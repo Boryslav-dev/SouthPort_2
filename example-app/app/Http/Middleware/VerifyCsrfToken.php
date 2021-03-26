@@ -16,5 +16,7 @@ class VerifyCsrfToken extends Middleware
         'http://127.0.0.1:8000/linearsupp/send',
         'http://127.0.0.1:8000/rte/send',
         'http://127.0.0.1:8000/induct/send',
+        'http://127.0.0.1:8000/special/{id}/send',
+        'http://127.0.0.1:8000/special-submit'
     ];
 }

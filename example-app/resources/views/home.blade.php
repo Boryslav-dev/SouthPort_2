@@ -145,40 +145,24 @@
                 <h1>Спецпредложение:</h1>
                 <p>Сейчас у нас действует акция на некоторые товары: </p>
                 <div class="row row-cols-1 row-cols-md-3 g-4 mb-3">
+                    @foreach($data as $key)
                     <div class="col">
                         <div class="card">
-                            <img src="{{asset('img/tech2.jpg')}}" class="card-img-top" alt="...">
+                            <img height="100" src="{{asset('/storage/'.$key->img)}}" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <h5 class="card-title">Название карточки</h5>
-                                <a href="#" class="btn btn-sm btn-success">Подробнее</a>
+                                <h5 class="card-title">{{$key->name}}</h5>
+                                <a href="{{route('special-data-one', $key->id)}}" class="btn btn-sm btn-success">Подробнее</a>
                             </div>
                         </div>
                     </div>
-                    <div class="col">
-                        <div class="card">
-                            <img src="{{asset('img/tech2.jpg')}}" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Название карточки</h5>
-                                <a href="#" class="btn btn-sm btn-success">Подробнее</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card">
-                            <img src="{{asset('img/tech2.jpg')}}" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Название карточки</h5>
-                                <a href="#" class="btn btn-sm btn-success">Подробнее</a>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
-                <p>Узнать больше вы можете здесь:<a href="#"> Спецпредложение</a> </p>
+                <p>Узнать больше вы можете здесь:<a href="/special"> Спецпредложение</a> </p>
             </div>
         </div>
     </div>
-    <div class = "container mb-5 border-success border border-2">
-        <div class="row intro-color ">
+    <div class = "container mb-5 border-success border-top border-bottom border-2">
+        <div class="row intro-color">
             <div class = "col-12 p-5">
                 <p class="h4">Собираетесь сделать заказ? Напишите нам на почту, что бы мы могли связаться с вами. <a href="/order" class="btn btn-lg btn-success ml-5">Заказать</a></p>
             </div>

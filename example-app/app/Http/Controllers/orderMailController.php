@@ -2,31 +2,32 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\mailRequest;
+use App\Http\Requests\orderRequest;
+use App\Mail\orderMail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
-use App\Mail\newMail;
 
-class mailController extends Controller
+class orderMailController extends Controller
 {
+
     function index()
     {
-        return view('contact');
+        return view('order');
     }
 
-    function send(mailRequest $request): \Illuminate\Http\RedirectResponse
+    function send(orderRequest $request): \Illuminate\Http\RedirectResponse
     {
+
         $data = array(
             'email'     =>   $request->email,
-            'product'   =>   $request->product,
-            'count'     =>   $request->count,
             'name'      =>   $request->name,
             'tel'       =>   $request->tel,
             'title'     =>   $request->title,
-            'message'   =>   $request->message
+            'message'   =>   $request->message,
+            'file'      =>   $request->file('file')->store('documents', 'public')
         );
 
-        Mail::to('kuchkov70@gmail.com')->send(new newMail($data));
+        Mail::to('kuchkov70@gmail.com')->send(new orderMail($data));
         return back()->with('success', 'Ваше письмо успешно отправленно!');
 
     }

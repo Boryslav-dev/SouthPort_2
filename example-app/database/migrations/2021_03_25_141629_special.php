@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateSpecialsTable extends Migration
+class Special extends Migration
 {
     /**
      * Run the migrations.
@@ -14,11 +14,12 @@ class CreateSpecialsTable extends Migration
     public function up()
     {
         Schema::create('specials', function (Blueprint $table) {
-            $table->increments('id');
+            $table->id();
             $table->string('name');
             $table->text('description');
-            $table->string('img');
             $table->string('price');
+            $table->string('img');
+            $table->string('shortdesc');
             $table->timestamps();
         });
     }
@@ -30,6 +31,6 @@ class CreateSpecialsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('specials');
+        //
     }
 }

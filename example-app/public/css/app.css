@@ -27,6 +27,10 @@ a:hover {
     color: #289f5a !important;
 }
 
+.btn-outline-secondary:hover, .btn-secondary:hover {
+    background-color: lightgray;
+}
+
 .green {
     text-decoration: none;
 }
@@ -42,23 +46,6 @@ a:hover {
 
     border-color: #289f5a !important;
 }
-
-.close {
-    background-color: transparent;
-    font-size: xx-large;
-    color: #2d3748;
-    border: none;
-    padding: 0 14px 0 14px;
-}
-
-.close:hover {
-    color: black;
-}
-
-.close:active{
-    border: none;
-}
-
 /* Navbars */
 
 nav {
@@ -123,18 +110,26 @@ nav {
 
 /* product */
 
-.order {
-    width: 18.5rem;
+.order, .order-induct {
+    margin: 8rem;
+    width: 22rem;
     height: 5.5rem;
     background-color: #ddffe4;
     text-align: center;
     border: #289f5a solid 1px;
 }
+.order-induct {
+    margin-left: 4rem !important;
+}
+
+.product{
+    text-decoration: none !important;
+}
 
 /*Slider*/
 
 .carousel-cell {
-    width: 16rem;
+    width: 20rem;
     height: 16rem;
     margin-right: 20px;
     counter-increment: carousel-cell;
@@ -146,19 +141,8 @@ nav {
     height: 13rem;
     margin-bottom: 1rem;
 }
-
 * { box-sizing: border-box; }
 
-
-/* cell number */
-
-.carousel-cell:before {
-    display: block;
-    text-align: center;
-    content: counter(gallery-cell);
-    line-height: 200px;
-    font-size: 80px;
-}
 
 /* Sidebar */
 
@@ -189,6 +173,30 @@ nav {
 .amount input {
     width:30px;
     text-align:center;
+}
+/* Image */
+
+img[tabindex="0"] {
+    cursor: zoom-in;
+}
+img[tabindex="0"]:focus {
+    position: fixed;
+    z-index: 999999;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 50% !important;
+    height: 75% !important;
+    max-width: 99%;
+    max-height: 99%;
+    margin: auto;
+    box-shadow: 0 0 20px #000, 0 0 0 1000px rgba(210,210,210,.4);
+}
+img[tabindex="0"]:focus,  /* убрать строку, если не нужно, чтобы при клике на увеличенное фото, оно возвращалось в исходное состояние */
+img[tabindex="0"]:focus ~ * {
+    pointer-events: none;
+    cursor: zoom-out;
 }
 
 /* Footer */

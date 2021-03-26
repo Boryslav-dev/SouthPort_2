@@ -12,26 +12,26 @@
 @endsection
 
 @section('content')
-    <form class="row g-3 needs-validation" novalidate="" action="{{route('create-submit') }}" method="post">
+    <form class="row g-3" action="{{route('create-submit')}}" method="post" enctype="multipart/form-data">
         {{ csrf_field() }}
         <div class ="col-md-6">
             <div class="col-md-12 input-group position-relative mb-2">
-                <label class="form-label">ЗАГРУЗИТЬ ФАЙЛЫ</label>
+                <label class="form-label">ЗАГРУЗИТЬ ФАЙЛ НА ТАБЛИЦУ:</label>
             </div>
             <div class="col-md-12 input-group">
-                <input type="file" class="form-control" id="inputGroupFile02">
+                <input type="file" class="form-control" id="inputGroupFile02" name="image" accept=".jpg, .jpeg, .png" size="">
+                <label class="input-group-text" for="inputGroupFile02">Upload</label>
+            </div>
+            <div class="col-md-12 input-group position-relative my-2">
+                <label class="form-label">ЗАГРУЗИТЬ ФАЙЛЫ:</label>
+            </div>
+            <div class="col-md-12 input-group">
+                <input type="file" class="form-control" id="inputGroupFile03" multiple="multiple" name="photos[]" accept=".jpg, .jpeg, .png" size="">
                 <label class="input-group-text" for="inputGroupFile02">Upload</label>
             </div>
             <div class="col-md-12 position-relative mb-2">
                 <label for="validationTooltip01" class="form-label">Название товара:</label>
                 <input type="text" class="form-control"  name="name" id="validationTooltip01" value="" required>
-                <div class="valid-tooltip">
-                    Looks good!
-                </div>
-            </div>
-            <div class="col-md-12 position-relative mb-2">
-                <label for="validationTooltip01" class="form-label">Название товара:</label>
-                <input type="text" class="form-control"  name="img" id="validationTooltip01" value="" required>
                 <div class="valid-tooltip">
                     Looks good!
                 </div>

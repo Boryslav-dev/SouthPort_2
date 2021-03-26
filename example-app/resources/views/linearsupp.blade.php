@@ -21,7 +21,7 @@
     @endif
     @if ($message = Session::get('success'))
         <div class="alert alert-success alert-block">
-            <button type="button" class="close" data-dismiss="alert">×</button>
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
             <strong>{{ $message }}</strong>
         </div>
     @endif
@@ -65,7 +65,7 @@
                                     <td class="align-middle">-</td>
                                     <td class="align-middle">42</td>
                                     <td class="align-middle">25</td>
-                                    <td><button type="button" class="btn-sm btn-success green" data-toggle="modal" data-target="#exampleModal" data-sb-whatever="RUS 19069">Заказать</button></td>
+                                    <td><button type="button" class="btn-sm btn-success green" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="RUS 19069">Заказать</button></td>
                                 </tr>
                                 <tr>
                                     <td>RUS 19105</td>
@@ -80,7 +80,7 @@
                                     <td class="align-middle">6</td>
                                     <td class="align-middle">68</td>
                                     <td class="align-middle">25</td>
-                                    <td><button type="button" class="btn-sm btn-success green" data-toggle="modal" data-target="#exampleModal" data-sb-whatever="RUS 19105">Заказать</button></td>
+                                    <td><button type="button" class="btn-sm btn-success green" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="RUS 19105">Заказать</button></td>
                                 </tr>
                                 <tr>
                                     <td>RUSZ 12044</td>
@@ -95,7 +95,7 @@
                                     <td class="align-middle">-</td>
                                     <td class="align-middle">42</td>
                                     <td class="align-middle">25</td>
-                                    <td><button type="button" class="btn-sm btn-success green" data-toggle="modal" data-target="#exampleModal" data-sb-whatever="RUSZ 12044">Заказать</button></td>
+                                    <td><button type="button" class="btn-sm btn-success green" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="RUSZ 12044">Заказать</button></td>
                                 </tr>
                                 <tr>
                                     <td>RUS 26086</td>
@@ -110,7 +110,7 @@
                                     <td class="align-middle">10</td>
                                     <td class="align-middle">76</td>
                                     <td class="align-middle">25</td>
-                                    <td><button type="button" class="btn-sm btn-success green" data-toggle="modal" data-target="#exampleModal" data-sb-whatever="RUSZ 12044">Заказать</button></td>
+                                    <td><button type="button" class="btn-sm btn-success green" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="RUSZ 12044">Заказать</button></td>
                                 </tr>
                                 <tr>
                                     <td>RUS 26102</td>
@@ -125,7 +125,7 @@
                                     <td class="align-middle">10</td>
                                     <td class="align-middle">95</td>
                                     <td class="align-middle">25</td>
-                                    <td><button type="button" class="btn-sm btn-success green" data-toggle="modal" data-target="#exampleModal" data-sb-whatever="RUS 26102">Заказать</button></td>
+                                    <td><button type="button" class="btn-sm btn-success green" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="RUS 26102">Заказать</button></td>
                                 </tr>
                                 <tr>
                                     <td>RUS 26126</td>
@@ -140,7 +140,7 @@
                                     <td class="align-middle">10</td>
                                     <td class="align-middle">122</td>
                                     <td class="align-middle">25</td>
-                                    <td><button type="button" class="btn-sm btn-success green" data-toggle="modal" data-target="#exampleModal" data-sb-whatever="RUS 26126">Заказать</button></td>
+                                    <td><button type="button" class="btn-sm btn-success green" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="RUS 26126">Заказать</button></td>
                                 </tr>
                                 <tr>
                                     <td>RUSZ 18059</td>
@@ -155,7 +155,7 @@
                                     <td class="align-middle">-</td>
                                     <td class="align-middle">86</td>
                                     <td class="align-middle">25</td>
-                                    <td><button type="button" class="btn-sm btn-success green" data-toggle="modal" data-target="#exampleModal" data-sb-whatever="RUSZ 18059">Заказать</button></td>
+                                    <td><button type="button" class="btn-sm btn-success green" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="RUSZ 18059">Заказать</button></td>
                                 </tr>
                                 <tr>
                                     <td>RUS 38134</td>
@@ -170,7 +170,7 @@
                                     <td class="align-middle">14</td>
                                     <td class="align-middle">179</td>
                                     <td class="align-middle">25</td>
-                                    <td><button type="button" class="btn-sm btn-success green" data-toggle="modal" data-target="#exampleModal" data-sb-whatever="RUS 38134">Заказать</button></td>
+                                    <td><button type="button" class="btn-sm btn-success green" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="RUS 38134">Заказать</button></td>
                                 </tr>
                                 <tr>
                                     <td>RUS 38206</td>
@@ -185,7 +185,7 @@
                                     <td class="align-middle">14</td>
                                     <td class="align-middle">305</td>
                                     <td class="align-middle">25</td>
-                                    <td><button type="button" class="btn-sm btn-success green" data-toggle="modal" data-target="#exampleModal" data-sb-whatever="RUS 38206">Заказать</button></td>
+                                    <td><button type="button" class="btn-sm btn-success green" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="RUS 38206">Заказать</button></td>
                                 </tr>
                                 <tr>
                                     <td>RUSZ 24084</td>
@@ -200,7 +200,7 @@
                                     <td class="align-middle">-</td>
                                     <td class="align-middle">179</td>
                                     <td class="align-middle">25</td>
-                                    <td><button type="button" class="btn-sm btn-success green" data-toggle="modal" data-target="#exampleModal" data-sb-whatever="RUSZ 24084">Заказать</button></td>
+                                    <td><button type="button" class="btn-sm btn-success green" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="RUSZ 24084">Заказать</button></td>
                                 </tr>
                                 </tbody>
                             </table>
@@ -210,6 +210,7 @@
             </div>
         </div>
     </div>
+
 @endsection
 
 @section('aside')

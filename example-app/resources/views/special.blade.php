@@ -12,7 +12,7 @@
 @section('content')
     @if ($message = Session::get('success'))
         <div class="alert alert-success alert-block">
-            <button type="button" class="close" data-dismiss="alert">×</button>
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
             <strong>{{ $message }}</strong>
         </div>
     @endif
@@ -20,23 +20,23 @@
 
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
             @foreach($data as $key)
-            <div class="col-4 col-md-4 col-sm-12 col-lg-4">
+            <div class="col-12 col-md-4 col-sm-12 col-lg-4">
                 <div class="card shadow-sm">
-                    <img src="{{asset('img/tech3.jpg')}}">
+                    <img height="250" src="{{asset('/storage/'.$key->img)}}" alt="{{$key->name}}">
                     <div class="card-body">
-                        <h5 class="card-title">{{$key->name}}</h5>
+                        <a class="product green" href="{{route('special-data-one', $key->id)}}"><h5 class="card-title">{{$key->name}}</h5></a>
                         <p class="card-text">{{$key->shortdesc}}</p>
                         <div class="row">
                             <div class="col-md-6 col-6 mt-2">
                                 <h4 class="card-title">{{$key->price}}.грн</h4>
                             </div>
-                            <div class="col-md-6 col-6">
-                                <a href="{{route('special-data-one', $key->id)}}" class="btn btn-lg btn-outline-secondary">Подробнее</a>
+                            <div class="col-md-6 col-12 pr-2">
+                                <a href="{{route('special-data-one', $key->id)}}" class="btn btn btn-outline-secondary">Подробнее</a>
                             </div>
                         </div>
                     </div>
                     <div class="card-footer d-flex justify-content-between align-items-center mt-3">
-                        @if (session('moder') == $key->user_name || session('admin'))
+                        @if (session('admin'))
                         <div class="btn-group">
                             <a href="{{route('special-delete', $key->id)}}" class="btn btn-sm btn-outline-danger">Удалить</a>
                             <a href="{{route('special-update', $key->id)}}" class="btn btn-sm btn-outline-info">Редактировать</a>

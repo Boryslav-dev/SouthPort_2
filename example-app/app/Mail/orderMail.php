@@ -2,12 +2,13 @@
 
 namespace App\Mail;
 
+use App\Http\Controllers\orderMailController;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
-class newMail extends Mailable
+class orderMail extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -29,10 +30,11 @@ class newMail extends Mailable
      *
      * @return $this
      */
-    public function build(): newMail
+    public function build(): orderMail
     {
         return $this->subject('Южный порт:')
-            ->view('email')
+            ->view('orderMail')
+            ->attach($this->data['file'])
             ->with('data', $this->data)
             ->from('kuchkov70@gmail.com');
     }

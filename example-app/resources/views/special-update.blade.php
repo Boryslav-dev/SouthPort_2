@@ -38,13 +38,13 @@
             </div>
             <div class="col-md-12 mb-2">
                 <label for="lastName" class="form-label">Краткое Описание товара:</label>
-                <textarea class="form-control" id="lastName" name="shortdesc" value="{{$data->shortdesc}}" rows="4" cols="30"></textarea>
+                <textarea class="form-control" id="lastName" name="shortdesc" rows="4" cols="30">{{$data->shortdesc}}</textarea>
                 <div class="invalid-feedback">
                     Valid last name is required.
                 </div>
             </div>
         </div>
-        <div class ="col-md-12">
+        <div class ="col-md-6">
             <div class="col-md-12 mb-2">
                 <label for="lastName" class="form-label">Описание товара:</label>
                 <textarea class="form-control" id="lastName" name="description" rows="20" cols="60">{{$data->description}}</textarea>
